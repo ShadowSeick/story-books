@@ -1,0 +1,145 @@
+:root {
+    font-size: 16px;
+}
+
+p {
+    margin: 10px 0 !important;
+}
+
+.text-capitalize {
+    text-transform: capitalize !important;
+}
+
+.text-uppercase {
+    text-transform: uppercase !important;
+}
+
+.text-white {
+    color:white !important;
+}
+
+.text-black {
+    color: black !important;
+}
+
+.text-left-align {
+    text-align: start !important;
+}
+
+.login-container {
+    width: 25rem;
+    margin-top: 3.125rem;
+    text-align: center;
+}
+
+.fa-small {
+    font-size: 1rem !important;
+}
+
+.btn-float {
+    float: left;
+    margin-right: 10px;
+}
+
+.img-small {
+    width: 11rem;
+}
+
+.pointable {
+    cursor: pointer;
+}
+
+.d-flex {
+    display: flex;
+}
+
+@media (max-width: 450px) {
+    .card-reveal > .d-flex {
+        flex-direction: column;
+        height: 75px;
+    }
+}
+
+.w-100 {
+    width:100%;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.short-separator {
+    display: block;
+    margin: auto;
+    width: 5%;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.mt-1 {
+    margin-top: 0.5rem;
+}
+
+.mt-2 {
+    margin-top: 1rem;
+}
+
+.me-0 {
+    margin-right: 0 !important;
+}
+
+.me-1 {
+    margin-right: 0.5rem;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+
+
+@media (max-width: 1620px) {
+    div.col.s12.m4 {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1100px) {
+    div.col.s12.m4 {
+        width: 75%;
+        float:none;
+        margin:auto;
+    }
+}
+
+@media (max-width: 850px) {
+    div.col.s12.m4 {
+        width: 90%;
+        float:none;
+        margin:auto;
+    }
+}
+
+@media (max-width: 560px) {
+    div.col.s12.m4 {
+        width: 100%;
+    }
+
+    div.row.text-white {
+        margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,38 @@
+<h6>Dashboard</h6>
+<h3>Welcome {{name}}</h3>
+<p>Here are your stories</p>
+{{#if stories}}
+    <table class="striped responsive-table">
+        <thead>
+            <tr>
+                <th class="text-left-align">Title</th>
+                <th class="text-left-align">Date</th>
+                <th class="text-left-align">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each stories}}
+                <tr>
+                    <td><a href="/stories/show/{{_id}}">{{title}}</a></td>
+                    <td>{{formatDate createdAt 'MMM Do YYYY, h:mm:ss a'}}</td>
+                    <td><span class="dash-status">{{status}}</span></td>
+                    <td>
+                        <div class="d-flex justify-center">
+                            <a href="/stories/edit/{{_id}}" class="btn me-1">
+                        <i class="fas fa-edit fa-small"></i></a>
+
+                        <form action="/stories/{{_id}}?_method=DELETE" method="POST" id="delete-form">
+                            <button type="submit" class="btn red">
+                                <i class="fas fa-trash fa-small"></i>
+                            </button>
+                        </form>
+                        </div>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{else}}
+<p>You have not created any stories</p>
+{{/if}}
+<a href="/stories" class="btn btn-large waves-effect waves-light mt-2">public stories</a>
