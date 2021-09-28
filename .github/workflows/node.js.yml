@@ -27,14 +27,16 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - name: Get enviroment variables
+    - name: Get Mongo URI
       env:
         MONGO_URI: ${{ secrets.MONGO_URI }}
+      run: echo "$MONGO_URI"
+
+    - name: Get Google Client ID
+      env:
         GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+      run: echo "$GOOGLE_CLIENT_ID"
+    - name: Get Client Secret
+      env:
         GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
-      run: |
-            echo "$MONGO_URI"
-            echo "$GOOGLE_CLIENT_ID"
-            echo "$GOOGLE_CLIENT_SECRET"
-    - run: npm run build --if-present
-    - run: npm test
+      run: echo "$GOOGLE_CLIENT_SECRET"
