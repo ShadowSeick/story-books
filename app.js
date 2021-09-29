@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
 const morgan = require('morgan');
 const exphbs = require('express-handlebars');
 const session = require('express-session');
@@ -10,6 +11,9 @@ const methodOverride = require('method-override');
 const passport = require('passport');
 const MongoStore = require('connect-mongo');
 const connectDB = require('./config/db');
+
+//Load config file
+dotenv.config({ path: './config/config.env'});
 
 // Passport config
 require('./config/passport')(passport);
